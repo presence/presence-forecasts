@@ -1,0 +1,38 @@
+username: uname
+password: passwd
+wsdl_url: https://crm.presenceco.com/soap.php?wsdl
+#Add the days you would like to the process date to show future quarters, leave blank for current quarter
+days_to_add: 
+probabilities:
+    - name: closed
+      start: 100
+      end: 100
+    - name: commit
+      start: 90
+      end: 99
+    - name: upside
+      start: 75
+      end: 89
+    - name: swing
+      start: 50
+      end: 74
+    - name: undetermined
+      start: 0
+      end: 49
+regions:
+    - na_apac:
+    - emea_cala:
+
+#The email distro information on where to send the CSV file once complete
+send_email: Y #valid options are Y to send, and N not to send
+email_to_address: jgoecke@presenceco.com
+email_from_address: tgould@presenceco.com
+email_smtp_gateway: 89.1.250.248
+email_smtp_port: 25
+email_smtp_from_domain: tgould.presenceco.com
+#If the SMTP server requires authentication complete these, if not just leave blank
+email_smtp_username:
+email_smtp_password:
+email_smtp_type: ":login" #Valid types are: :login, :plain, :cram_md5 - SSL is not currently supported
+        
+        
